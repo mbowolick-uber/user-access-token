@@ -3,7 +3,7 @@ const app = express();
 const port = 3000;
 
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.send("Hello there :)");
 });
 
 app.get("/redirect_uri", (req, res) => {
@@ -13,5 +13,9 @@ app.get("/redirect_uri", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
+  console.log(`App listening on port ${port}`);
+  console.log(`\nhttp://localhost:${port}\n`);
+  console.log(
+    `You should see "Hello there" if working correctly :) \nCtrl + c to STOP`
+  );
 });
